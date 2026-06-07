@@ -1,0 +1,33 @@
+# CCNA Home Lab
+
+This repository documents my hands-on networking projects using physical Cisco hardware as I prepare for the CCNA.
+
+## Goals
+
+- Earn the CCNA before returning to Murray State University.
+- Strengthen networking fundamentals through practical experience.
+- Build a portfolio of documented networking projects.
+
+## Lab Roadmap
+
+- [ ] Lab 001 – VLANs and 802.1Q Trunking
+- [ ] Lab 002 – Inter-VLAN Routing
+- [ ] Lab 003 – Spanning Tree Protocol (STP)
+- [ ] Lab 004 – EtherChannel
+- [ ] Lab 005 – Port Security
+- [ ] Lab 006 – DHCP Snooping & Dynamic ARP Inspection
+- [ ] Lab 007 – Access Control Lists (ACLs)
+- [ ] Lab 008 – OSPF Fundamentals
+- [ ] Lab 009 – Network Troubleshooting Scenarios
+- [ ] Lab 010 – CCNA Enterprise Final Lab
+
+## Hardware
+
+- Cisco WS-C2960S-48TS-S
+- Cisco WS-C2960-48PST-S
+- USB-to-RJ45 Console Cable
+- Cat5e/Cat6 Patch Cables
+
+## About
+
+All configurations and documentation in this repository were created in a personal home lab environment for educational purposes.

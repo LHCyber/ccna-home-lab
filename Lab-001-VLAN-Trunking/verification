@@ -1,1 +1,72 @@
 
+# verification.md
+
+# Verification
+
+The following commands were used to confirm that the lab was functioning correctly.
+
+## Verify VLANs
+
+```cisco
+show vlan brief
+```
+
+### Expected Results
+
+* VLANs 10, 20, 30, and 99 exist.
+* All configured VLANs display an `active` status.
+
+---
+
+## Verify Trunk Status
+
+```cisco
+show interfaces trunk
+```
+
+### Expected Results
+
+* Trunk interface shows `trunking`.
+* Encapsulation displays `802.1Q`.
+
+---
+
+## Verify Allowed VLANs
+
+Expected output should include:
+
+```text
+10,20,30,99
+```
+
+under:
+
+```text
+Vlans allowed on trunk
+```
+
+---
+
+## Verify VLAN Propagation
+
+Expected output should include:
+
+```text
+Vlans allowed and active in management domain
+10,20,30,99
+```
+
+---
+
+## Verify Spanning Tree Status
+
+Ensure all VLANs are forwarding traffic:
+
+```text
+Vlans in spanning tree forwarding state and not pruned
+10,20,30,99
+```
+
+## Lab Outcome
+
+The trunk link successfully carried all intended VLANs between both switches.

@@ -10,7 +10,7 @@ This repository documents my hands-on networking projects using physical Cisco h
 
 ## Lab Roadmap
 
-- [ ] Lab 001 – VLANs and 802.1Q Trunking
+- [x] Lab 001 – VLANs and 802.1Q Trunking
 - [ ] Lab 002 – Inter-VLAN Routing
 - [ ] Lab 003 – Spanning Tree Protocol (STP)
 - [ ] Lab 004 – EtherChannel

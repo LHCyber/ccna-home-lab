@@ -1,1 +1,77 @@
+# Troubleshooting
 
+## Issue: VLAN 99 not appearing on trunk
+
+### Symptoms
+
+```text
+Vlans allowed and active in management domain
+10,20,30
+```
+
+### Resolution
+
+Created VLAN 99 on both switches and added it to the trunk:
+
+```cisco
+switchport trunk allowed vlan add 99
+```
+
+---
+
+## Issue: Incorrect Trunk Command Syntax
+
+### Attempted Command
+
+```cisco
+switchport mode trunk vlan 99
+```
+
+### Error
+
+```text
+Invalid input detected at '^' marker.
+```
+
+### Resolution
+
+Used the correct command:
+
+```cisco
+switchport trunk allowed vlan add 99
+```
+
+---
+
+## Issue: Ambiguous IOS Commands
+
+### Example
+
+```cisco
+show int tr
+```
+
+### Error
+
+```text
+% Ambiguous command
+```
+
+### Resolution
+
+Use the full command:
+
+```cisco
+show interfaces trunk
+```
+
+---
+
+## Lessons Learned
+
+- VLANs must exist locally on each switch to be active across a trunk.
+- Allowed VLANs and active VLANs are different concepts.
+- Trunk ports carry traffic for multiple VLANs using 802.1Q tagging.
+- Verification commands are just as important as configuration commands.
+- Layer 2 switches forward traffic within the same VLAN only.
+- Inter-VLAN routing requires a router or Layer 3 switch.

@@ -1,20 +1,62 @@
+# configuration.md
 
-# Configuration Summary
+## Configuration Notes
 
-## SW1
+This lab was completed using two physical Cisco Catalyst switches. Rather than copying commands from a simulator, I configured the devices manually through the console connection and verified each step along the way.
 
-### VLANs
+### VLANs Created
 
-- VLAN 10 – USERS
-- VLAN 20 – PHONES
-- VLAN 30 – SERVERS
-- VLAN 99 – MGMT
+| VLAN | Name    |
+| ---- | ------- |
+| 10   | USERS   |
+| 20   | PHONES  |
+| 30   | SERVERS |
+| 99   | MGMT    |
+
+---
+
+## SW1 Configuration
+
+Configured VLANs and established an 802.1Q trunk to SW2.
 
 ### Trunk Port
 
-Gi0/48 configured as an 802.1Q trunk.
+```cisco
+interface GigabitEthernet0/48
+ description Trunk to SW2
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,99
+ no shutdown
+```
 
-Allowed VLANs:
+---
 
-```text
-10,20,30,99
+## SW2 Configuration
+
+Configured matching VLANs and trunk settings.
+
+### Trunk Port
+
+```cisco
+interface GigabitEthernet0/4
+ description Trunk to SW1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,99
+ no shutdown
+```
+
+---
+
+## Saving Configuration
+
+After verifying functionality, configurations were saved using:
+
+```cisco
+copy running-config startup-config
+```
+
+### Takeaways
+
+* Consistency between switches is important.
+* Trunk links only carry VLANs that are explicitly allowed.
+* Verifying configurations is just as important as applying them.

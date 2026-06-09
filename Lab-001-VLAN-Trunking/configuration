@@ -1,1 +1,20 @@
 
+# Configuration Summary
+
+## SW1
+
+### VLANs
+
+- VLAN 10 – USERS
+- VLAN 20 – PHONES
+- VLAN 30 – SERVERS
+- VLAN 99 – MGMT
+
+### Trunk Port
+
+Gi0/48 configured as an 802.1Q trunk.
+
+Allowed VLANs:
+
+```text
+10,20,30,99

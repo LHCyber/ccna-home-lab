@@ -1,1 +1,21 @@
 
+# Network Topology
+
+                802.1Q Trunk
+           VLANs 10,20,30,99
+
+      Gi0/48                    Gi0/4
++----------------+         +----------------+
+|      SW1       |---------|      SW2       |
+| Cisco 2960S    |         | Cisco 2960     |
++----------------+         +----------------+
+
+
+## VLAN Definitions
+
+| VLAN | Name | Purpose |
+|-------|-------|----------|
+| 10 | USERS | User devices |
+| 20 | PHONES | Voice devices |
+| 30 | SERVERS | Server segment |
+| 99 | MGMT | Switch management |

@@ -1,1 +1,44 @@
+# Lab 001 – VLANs and 802.1Q Trunking
 
+## Overview
+
+In this lab, I configured two physical Cisco Catalyst switches to communicate using an 802.1Q trunk link. The objective was to create VLANs, establish a trunk connection, verify VLAN propagation, and gain hands-on experience working with Cisco IOS.
+
+This lab was completed as part of my CCNA home lab journey using real Cisco hardware.
+
+---
+
+## Objectives
+
+- Configure VLANs on multiple switches
+- Configure and verify an 802.1Q trunk
+- Allow specific VLANs across the trunk
+- Implement a management VLAN
+- Practice Cisco IOS verification and troubleshooting commands
+
+---
+
+## Skills Practiced
+
+- VLAN creation and naming
+- Trunk configuration
+- VLAN propagation
+- Spanning Tree verification
+- Cisco IOS navigation
+- Troubleshooting and validation
+
+---
+
+## Equipment Used
+
+- Cisco WS-C2960S-48TS-S
+- Cisco WS-C2960-48PST-S
+- USB-to-RJ45 console cable
+- Ethernet patch cable
+- PuTTY
+
+---
+
+## Lab Status
+
+Completed
